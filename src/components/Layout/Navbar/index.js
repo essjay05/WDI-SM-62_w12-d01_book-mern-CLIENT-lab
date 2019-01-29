@@ -8,7 +8,7 @@ export default () => (
             <Link to="/"> Home </Link>
         </div>
         <div>
-            <Link to="/characters/new"> New </Link>
+            <Link to="/books/new"> New </Link>
         </div>
     </nav>
 )
