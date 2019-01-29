@@ -19,7 +19,7 @@ export default class Home extends Component {
         debugger
         return (
             <div >
-                <h1> HOME PAGE... list ALL books here</h1>
+                <h1> Full Book List...</h1>
                 <ul>
                     { books.map(({ _id, title }) =>{
                         return (

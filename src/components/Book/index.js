@@ -10,7 +10,7 @@ export default class Book extends Component {
     }
 
     componentDidMount() {
-        debugger
+       
         let { id } = this.props.match.params;
         axios.get(`/api/books/${id}`)
             .then(({ data }) => {
@@ -19,8 +19,20 @@ export default class Book extends Component {
 
     }
 
-    render () {
+    handleSubmit = (e) => {
+        e.preventDefault();
+        let { id } = this.props.match.params;   
+        debugger
+        axios.delete(`/api/books/${id}`)
+       
+            .then( res => {
+                debugger
+                this.props.history.push(`/`)
+            })
+    }
 
+    render () {
+        debugger
         let { book, loading } = this.state
         if (loading) return <div></div>
         return (
@@ -28,6 +40,9 @@ export default class Book extends Component {
                 <h1> { book.title } </h1>
                 <h3> { book.author } </h3>
                 <p> { book.description } </p>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="submit" value="Delete"/>
+                </form>
             </div>
         )
     }
