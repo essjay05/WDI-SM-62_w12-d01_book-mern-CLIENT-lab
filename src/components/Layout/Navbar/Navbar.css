@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: steelblue;
+    color: white;
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}

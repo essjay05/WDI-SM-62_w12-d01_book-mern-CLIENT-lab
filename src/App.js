@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Layout from './components/Layout';
+import Home from './components/Home';
+import BookForm from'./components/BookForm';
+import Book from './components/Book';
 import NotFound from './components/NotFound';
 
 export default class App extends Component {
